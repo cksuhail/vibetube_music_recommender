@@ -6,7 +6,7 @@ import base64
 # Configure page
 st.set_page_config(
     page_title="VIBETUNE",
-    page_icon=r"img.png",
+    page_icon="img.png",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -24,7 +24,7 @@ def get_base64_gif(gif_path):
         return None
 
 # Get the base64 encoded GIF
-gif_path = r"hii.gif "  # Update this path to your GIF file
+gif_path = "hii.gif "  # Update this path to your GIF file
 gif_base64 = get_base64_gif(gif_path)
 
 # Create the background style with or without GIF
@@ -351,8 +351,8 @@ header {{visibility: hidden;}}
 @st.cache_resource
 def load_model_and_data():
     try:
-        model, le_emotion, le_genre = joblib.load(r'D:\mono\model\vibetune.pkl')
-        df = pd.read_csv(r'D:\mono\song.csv')
+        model, le_emotion, le_genre = joblib.load('model\vibetune.pkl')
+        df = pd.read_csv('song.csv')
         df.columns = df.columns.str.lower()
         return model, le_emotion, le_genre, df
     except Exception as e:
@@ -511,4 +511,5 @@ def main():
                 """, unsafe_allow_html=True)
 
 if __name__ == "__main__":
+
     main()
