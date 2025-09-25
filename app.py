@@ -24,7 +24,7 @@ def get_base64_gif(gif_path):
         return None
 
 # Get the base64 encoded GIF
-gif_path = "statics/hii.gif "  
+gif_path = "statics/hii.gif"  
 gif_base64 = get_base64_gif(gif_path)
 
 # Create the background style with or without GIF
@@ -351,8 +351,8 @@ header {{visibility: hidden;}}
 @st.cache_resource
 def load_model_and_data():
     try:
-        model, le_emotion, le_genre = joblib.load('model\vibetune.pkl')
-        df = pd.read_csv('song.csv')
+        model, le_emotion, le_genre = joblib.load("model/vibetune.pkl")
+        df = pd.read_csv("song.csv")
         df.columns = df.columns.str.lower()
         return model, le_emotion, le_genre, df
     except Exception as e:
@@ -513,4 +513,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
