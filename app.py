@@ -24,7 +24,7 @@ def get_base64_gif(gif_path):
         return None
 
 # Get the base64 encoded GIF
-gif_path = "statics/hii.gif"  
+gif_path = "static/hii.gif"  
 gif_base64 = get_base64_gif(gif_path)
 
 # Create the background style with or without GIF
@@ -513,5 +513,6 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
